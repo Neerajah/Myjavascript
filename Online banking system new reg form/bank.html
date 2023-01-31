@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Online Banking System</title>
+        <script type="text/javascript">
+            function fun()
+            {
+               alert("Name: "+form1.userName.value);
+                alert("Mail-id: "+form1.email.value);
+                alert("Password: "+form1.pwd.value);
+                alert("Mobile Number: "+form1.phno.value);
+                alert("Amount: "+form1.amt.value);
+                alert("Amount in words: "+form1.amt.value);
+                alert("Account Type: "+form1.MyMenu.value);
+                alert("Account Number: "+form1.AccNo.value);
+            }
+        </script>
+    </head>
+    <body bgcolor="khaki">
+        <form name="form1" onsubmit="fun()">
+        <table>
+            <div align="right"><b>Date: </b><input type="text" name="date"></div>
+            <tr><td><b>Name: </b></td><td><input type="text" name="userName"></tr>
+            <tr><td><b>Mail-id: </b></td><td><input type="text" name="email"></tr>
+            <tr><td><b>Password: </b></td><td><input type="password" name="pwd"></tr>
+            <tr><td><b>Mobile Number: </b></td><td><input type="text" name="phno"></tr>
+            <tr><td><b>Amount: </b></td><td><input type="text" name="amt"></tr>
+            <tr><td><b>Amount in words: </b></td><td><input type="text" name="amt"></tr>
+            <tr><td><b>Account Type: </b></td>
+                <td><select name="MyMenu">
+                    <option value="Savings Account">Savings Account</option>
+                    <option value="Current Account">Current Account</option>
+                </select>
+            </td>
+            </tr>
+            <tr><td><b>Account Number: </b></td><td><input type="text" name="AccNo"></tr>
+            <tr><td><b>Facilities: </b></td>
+                <td><input type="checkbox" name="option1" value="ATM card">ATM Card</tr>
+                <tr></tr><td></td><td><input type="checkbox" name="option2" value="Cheque book">Cheque Book</td></tr>
+        </table>
+    <br/><br/>
+    <center>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Clear">
+    </center>
+        </form>
+    </body>
+</html>

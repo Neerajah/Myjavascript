@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC"-//W3C//DTD XHTML 1.0 Transitional//EN"http://www.w3.org/TR/xhtml1/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Demo of onclick Tag Attribute</title>
+    <script type="text/javascript">
+        function my_fun()
+        {
+            var mypwd=document.getElementById("pwd");
+            var my_re_pwd=document.getElementById("re_pwd");
+            if(mypwd,value=="")
+            {
+                alert("You have not entered the password");
+                mypwd.focus();
+                return false;
+            }
+            if(mypwd.value!=my_re_pwd.value)
+            {
+                alert("Password is not verified,Re-enter both the passwords");
+                mypwd.focus();
+                mypwd.select();
+                return false;
+            }
+            else
+            {
+               alert("Congratulations!!!");
+               return true;
+            }
+        }
+</script>
+    </head>
+    <body>
+        <center>
+            <form id="form1">
+                <label>Enter your password
+                <input type="password" value="" id="pwd"/>
+            </label>
+            <br/><br/>
+            <label>Re-Enter the password
+                <input type="password" value="" id="re_pwd" onblur="my_fun();"/>
+            </label><br/>
+            <input type="submit" value="Submit" name="submit" onsubmit="my_fun();"/>
+            <input type="reset" value="Reset" name="reset"/><br/>
+            </form>
+        </center>
+    </body>
+</html>

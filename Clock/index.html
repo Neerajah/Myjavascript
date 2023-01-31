@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            function Display()
+            {
+                var today=new Date();
+                var h=today.getHours();
+                var m=today.getMinutes();
+                var s=today.getSeconds();
+                h=ConvertTwelve(h);
+                m=SingleDigit(m);
+                s=SingleDigit(s);
+                document.getElementById("mytext").value=h+":"+m+":"+s;
+                t=setTimeout('Display()',500);
+            }
+            function ConvertTwelve(h)
+            {
+                if(h>=12)
+                h=h-12;
+                return h;
+            }
+            function SingleDigit(i)
+            {
+              if(i<10)
+               {
+                i="0" + i;//writing 0 before single digit number
+               }
+                 return i;
+            }
+        </script>
+    </head>
+    <body onload="Display">
+      <input type="text" value="" size="5" id="mytext"/>
+    </body>
+</html>
