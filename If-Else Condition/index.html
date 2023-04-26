@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function MyMessage()
+            {
+                var today=new Date();
+                var h=today.getHours();
+                if(h<12)
+                document.write("Good Day");
+                else
+                document.write("Good Bye");
+            }
+        </script>
+    </head>
+    <body onload="MyMessage()">
+    </body>
+</html>
