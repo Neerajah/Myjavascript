@@ -1,0 +1,19 @@
+<html>
+<head>
+    <script type="text/javascript"></script>
+    <body onload="GreetMsg()">
+    function GreetMsg();
+    {
+        var today=new Date();
+        var h=today.getHours();
+        var m=today.getMinutes();
+        var s=today.getSeconds();
+        if(h<10)
+          alert("Good Morning!!!(Time "+h+":"+m+":"+s+")");
+        else
+          alert("Have a Good Day!!!(Time" +h+":"+m+":"+s+")");
+    }
+</head>
+</body>
+
+</html>
