@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-container {
+    width: 100%;
+    height: 100vh;
+    z-index: 3000;
+    background-color: purple;
+}
+
+.left-menu {
+    width: 13rem;
+    height: 100vh;
+    display: flex;
+    position: relative;
+    background: white;
+    flex-direction: column;
+    transition: all .4s ease;
+}
+
+.menu {
+    position: absolute;
+    list-style: none;
+    color: #fff;
+    z-index: 1200;
+    top: 4%;
+    right: -20px;
+    cursor: pointer;
+    font-size: 25px;
+    transition: all 0.7s;
+    transform: rotate(-90deg);
+}
+
+.active {
+    transform: rotate(90deg);
+}
+
+.left-menu ul li a {
+    display: flex;
+}
+
+.logo {
+    position: relative;
+    width: 60px;
+    top: 1rem;
+    left: 0.5rem;
+    display: flex;
+    align-items: center;
+    margin: 10px 0 0 0px;
+    justify-content: center;
+}
+
+.logo img {
+    width: 100%;
+    z-index: 100;
+    position: absolute;
+}
+
+.logo span {
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.logo a {
+    position: relative;
+    color: #7410f0;
+    text-align: left;
+    font-size: 18px;
+    display: table;
+    left: 180px;
+    width: 300px;
+    padding: 10px;
+    text-decoration: none;
+    font-family: 'Poppins', 'sans-serif';
+}
+
+.left-menu ul {
+    display: flex;
+    margin-top: 2rem;
+    overflow: hidden;
+    margin-left: 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+ul li {
+    list-style: none;
+    align-items: center;
+    margin-bottom: 1rem;
+    transition: all .3s linear;
+    font-family: 'Poppins', sans-serif;
+}
+
+ul li a {
+    padding: 0.5rem;
+    color: #7410f0;
+    text-decoration: none;
+}
+
+ul li a i {
+    cursor: pointer;
+    color: #7410f0;
+    font-size: 1.4rem;
+    margin-right: 1.2rem;
+    text-decoration: none;
+    transition: all .3s linear;
+}
+
+.sidebar-item i {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+
+#settings {
+    position: absolute;
+    bottom: 1rem;
+}
+
+.left-menu ul li:hover {
+    transform: translateX(.4rem);
+    transition: all .4s linear;
+}
+
+.left-menu ul li:hover .fa-solid,
+.left-menu ul li:hover a {
+    font-weight: bold;
+    color: purple;
+}

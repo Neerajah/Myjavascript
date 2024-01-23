@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sidebar Menu </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="main-container">
+        <div class="left-menu">
+            <div class="logo">
+                <img src="./mainLogo.png" alt="">
+                <span class="logoLink"><a href="">Geeks Help</a></span>
+            </div>
+            <li class="menu"><i class="fa-sharp fa-solid fa-circle-chevron-down"></i></li>
+            <ul>
+                <li class="sidebar-item"><a class="sidebar-link" href="#"><i class="fa-solid fa-house"></i> Home </a>
+                </li>
+                <li class="sidebar-item"><a class="sidebar-link" href="#"><i class="fa-solid fa-user"></i> User </a>
+                </li>
+                <li class="sidebar-item"><a class="sidebar-link" href="#"><i class="fa-solid fa-file"></i> Files </a>
+                </li>
+                <li class="sidebar-item"><a class="sidebar-link" href="#"><i class="fa-solid fa-store"></i> Saved </a>
+                </li>
+                <li class="sidebar-item"><a class="sidebar-link" href="#"><i class="fa-solid fa-calendar-days"></i>
+                        Events </a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="#"><i class="fa-solid fa-message"></i> Message
+                    </a></li>
+                <li class="sidebar-item"><a href="#"><i class="fa-solid fa-chart-line"></i> Analytics </a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="#"><i class="fa-solid fa-rocket"></i> Services
+                    </a></li>
+                <li class="sidebar-item" id="settings"><a id="setting" class="sidebar-link" href="#"><i class="fa-solid fa-gear"></i></a>
+                <li>
+            </ul>
+        </div>
+
+        <!-- Right Content Goes here -->
+        <div class="right-content"></div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
