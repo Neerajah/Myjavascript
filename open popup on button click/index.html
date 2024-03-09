@@ -7,15 +7,25 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="mainContainer">
-        <button class="btn" id="submit">Submit</button>
-        <div class="PopupContainer" id="popupMenu">
-            <img id="image" src="./thankyou.webp" alt="">
-            <h2>Thank You!</h2>
-            <p>Thank you sir! Your form has been successfully submitted</p>
-            <button id="close">OK</button>
-        </div>
-    </div>
+    <h1>POPUP FORM:</h1>
+    <p>Click on the button at the bottom of this page.</p>
+    <button class="open-button" onclick="openForm()">Open Form</button>
+
+<!-- The form -->
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Login</h1>
+
+    <label for="email"><b>Email:</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password:</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" class="btn">Login</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
 </body>
 <script src="script.js"></script>
 </html>
