@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+        .terms-container {
+            width: 60%;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            padding: 15px;
+            height: 200px;
+            overflow-y: scroll;
+            text-align: left;
+        }
+        .button-container {
+            margin-top: 15px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+        button.enabled {
+            cursor: pointer;
+            opacity: 1;
+        }
+        .checkbox-container {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Terms and Conditions</h2>
+    <div class="terms-container" id="termsBox">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        
+    </div>
+    <div class="checkbox-container">
+        <input type="checkbox" id="agreeCheckbox"> I agree to the Terms and Conditions
+    </div>
+    <div class="button-container">
+        <button id="acceptBtn" disabled>Accept</button>
+    </div>
+    <script>
+        const termsBox = document.getElementById('termsBox');
+        const acceptBtn = document.getElementById('acceptBtn');
+        const agreeCheckbox = document.getElementById('agreeCheckbox');
+
+        termsBox.addEventListener('scroll', function() {
+            if (termsBox.scrollHeight - termsBox.scrollTop <= termsBox.clientHeight + 1) {
+                agreeCheckbox.disabled = false;
+            }
+        });
+
+        agreeCheckbox.addEventListener('change', function() {
+            acceptBtn.disabled = !agreeCheckbox.checked;
+            acceptBtn.classList.toggle('enabled', agreeCheckbox.checked);
+        });
+    </script>
+</body>
+</html>
